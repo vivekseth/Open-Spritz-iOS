@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5875EEB719A1513700058F77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5875EEB619A1513700058F77 /* Foundation.framework */; };
+		5875EEB919A1513700058F77 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5875EEB819A1513700058F77 /* CoreGraphics.framework */; };
+		5875EEBB19A1513700058F77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5875EEBA19A1513700058F77 /* UIKit.framework */; };
+		5875EEC119A1513700058F77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5875EEBF19A1513700058F77 /* InfoPlist.strings */; };
+		5875EEC319A1513700058F77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EEC219A1513700058F77 /* main.m */; };
+		5875EEC719A1513700058F77 /* VSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EEC619A1513700058F77 /* VSAppDelegate.m */; };
+		5875EECA19A1513700058F77 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5875EEC819A1513700058F77 /* Main_iPhone.storyboard */; };
+		5875EECD19A1513700058F77 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5875EECB19A1513700058F77 /* Main_iPad.storyboard */; };
+		5875EED019A1513700058F77 /* VSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EECF19A1513700058F77 /* VSViewController.m */; };
+		5875EED219A1513700058F77 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5875EED119A1513700058F77 /* Images.xcassets */; };
+		5875EED919A1513800058F77 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5875EED819A1513700058F77 /* XCTest.framework */; };
+		5875EEDA19A1513800058F77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5875EEB619A1513700058F77 /* Foundation.framework */; };
+		5875EEDB19A1513800058F77 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5875EEBA19A1513700058F77 /* UIKit.framework */; };
+		5875EEE319A1513800058F77 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5875EEE119A1513800058F77 /* InfoPlist.strings */; };
+		5875EEE519A1513800058F77 /* Open_Spritz_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EEE419A1513800058F77 /* Open_Spritz_iOSTests.m */; };
+		5875EEF619A1515B00058F77 /* UIView+KHAExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EEF019A1515B00058F77 /* UIView+KHAExtensions.m */; };
+		5875EEF719A1515B00058F77 /* VSSpritzLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EEF219A1515B00058F77 /* VSSpritzLabel.m */; };
+		5875EEF819A1515B00058F77 /* VSSpritzViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5875EEF519A1515B00058F77 /* VSSpritzViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5875EEDC19A1513800058F77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5875EEAB19A1513700058F77 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5875EEB219A1513700058F77;
+			remoteInfo = "Open Spritz iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5875EEB319A1513700058F77 /* Open Spritz iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Spritz iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5875EEB619A1513700058F77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5875EEB819A1513700058F77 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5875EEBA19A1513700058F77 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5875EEBE19A1513700058F77 /* Open Spritz iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Open Spritz iOS-Info.plist"; sourceTree = "<group>"; };
+		5875EEC019A1513700058F77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5875EEC219A1513700058F77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5875EEC419A1513700058F77 /* Open Spritz iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Open Spritz iOS-Prefix.pch"; sourceTree = "<group>"; };
+		5875EEC519A1513700058F77 /* VSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSAppDelegate.h; sourceTree = "<group>"; };
+		5875EEC619A1513700058F77 /* VSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSAppDelegate.m; sourceTree = "<group>"; };
+		5875EEC919A1513700058F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5875EECC19A1513700058F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5875EECE19A1513700058F77 /* VSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSViewController.h; sourceTree = "<group>"; };
+		5875EECF19A1513700058F77 /* VSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VSViewController.m; sourceTree = "<group>"; };
+		5875EED119A1513700058F77 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5875EED719A1513700058F77 /* Open Spritz iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Open Spritz iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5875EED819A1513700058F77 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5875EEE019A1513800058F77 /* Open Spritz iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Open Spritz iOSTests-Info.plist"; sourceTree = "<group>"; };
+		5875EEE219A1513800058F77 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5875EEE419A1513800058F77 /* Open_Spritz_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Open_Spritz_iOSTests.m; sourceTree = "<group>"; };
+		5875EEEF19A1515B00058F77 /* UIView+KHAExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KHAExtensions.h"; sourceTree = "<group>"; };
+		5875EEF019A1515B00058F77 /* UIView+KHAExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KHAExtensions.m"; sourceTree = "<group>"; };
+		5875EEF119A1515B00058F77 /* VSSpritzLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSpritzLabel.h; sourceTree = "<group>"; };
+		5875EEF219A1515B00058F77 /* VSSpritzLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSpritzLabel.m; sourceTree = "<group>"; };
+		5875EEF319A1515B00058F77 /* VSSpritzView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSpritzView.h; sourceTree = "<group>"; };
+		5875EEF419A1515B00058F77 /* VSSpritzViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSSpritzViewController.h; sourceTree = "<group>"; };
+		5875EEF519A1515B00058F77 /* VSSpritzViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VSSpritzViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5875EEB019A1513700058F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5875EEB919A1513700058F77 /* CoreGraphics.framework in Frameworks */,
+				5875EEBB19A1513700058F77 /* UIKit.framework in Frameworks */,
+				5875EEB719A1513700058F77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5875EED419A1513700058F77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5875EED919A1513800058F77 /* XCTest.framework in Frameworks */,
+				5875EEDB19A1513800058F77 /* UIKit.framework in Frameworks */,
+				5875EEDA19A1513800058F77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5875EEAA19A1513700058F77 = {
+			isa = PBXGroup;
+			children = (
+				5875EEBC19A1513700058F77 /* Open Spritz iOS */,
+				5875EEDE19A1513800058F77 /* Open Spritz iOSTests */,
+				5875EEB519A1513700058F77 /* Frameworks */,
+				5875EEB419A1513700058F77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5875EEB419A1513700058F77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEB319A1513700058F77 /* Open Spritz iOS.app */,
+				5875EED719A1513700058F77 /* Open Spritz iOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5875EEB519A1513700058F77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEB619A1513700058F77 /* Foundation.framework */,
+				5875EEB819A1513700058F77 /* CoreGraphics.framework */,
+				5875EEBA19A1513700058F77 /* UIKit.framework */,
+				5875EED819A1513700058F77 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5875EEBC19A1513700058F77 /* Open Spritz iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEEE19A1515B00058F77 /* VSSpritz */,
+				5875EEC519A1513700058F77 /* VSAppDelegate.h */,
+				5875EEC619A1513700058F77 /* VSAppDelegate.m */,
+				5875EEC819A1513700058F77 /* Main_iPhone.storyboard */,
+				5875EECB19A1513700058F77 /* Main_iPad.storyboard */,
+				5875EECE19A1513700058F77 /* VSViewController.h */,
+				5875EECF19A1513700058F77 /* VSViewController.m */,
+				5875EED119A1513700058F77 /* Images.xcassets */,
+				5875EEBD19A1513700058F77 /* Supporting Files */,
+			);
+			path = "Open Spritz iOS";
+			sourceTree = "<group>";
+		};
+		5875EEBD19A1513700058F77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEBE19A1513700058F77 /* Open Spritz iOS-Info.plist */,
+				5875EEBF19A1513700058F77 /* InfoPlist.strings */,
+				5875EEC219A1513700058F77 /* main.m */,
+				5875EEC419A1513700058F77 /* Open Spritz iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5875EEDE19A1513800058F77 /* Open Spritz iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEE419A1513800058F77 /* Open_Spritz_iOSTests.m */,
+				5875EEDF19A1513800058F77 /* Supporting Files */,
+			);
+			path = "Open Spritz iOSTests";
+			sourceTree = "<group>";
+		};
+		5875EEDF19A1513800058F77 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEE019A1513800058F77 /* Open Spritz iOSTests-Info.plist */,
+				5875EEE119A1513800058F77 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5875EEEE19A1515B00058F77 /* VSSpritz */ = {
+			isa = PBXGroup;
+			children = (
+				5875EEEF19A1515B00058F77 /* UIView+KHAExtensions.h */,
+				5875EEF019A1515B00058F77 /* UIView+KHAExtensions.m */,
+				5875EEF119A1515B00058F77 /* VSSpritzLabel.h */,
+				5875EEF219A1515B00058F77 /* VSSpritzLabel.m */,
+				5875EEF319A1515B00058F77 /* VSSpritzView.h */,
+				5875EEF419A1515B00058F77 /* VSSpritzViewController.h */,
+				5875EEF519A1515B00058F77 /* VSSpritzViewController.m */,
+			);
+			path = VSSpritz;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5875EEB219A1513700058F77 /* Open Spritz iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5875EEE819A1513800058F77 /* Build configuration list for PBXNativeTarget "Open Spritz iOS" */;
+			buildPhases = (
+				5875EEAF19A1513700058F77 /* Sources */,
+				5875EEB019A1513700058F77 /* Frameworks */,
+				5875EEB119A1513700058F77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Open Spritz iOS";
+			productName = "Open Spritz iOS";
+			productReference = 5875EEB319A1513700058F77 /* Open Spritz iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5875EED619A1513700058F77 /* Open Spritz iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5875EEEB19A1513800058F77 /* Build configuration list for PBXNativeTarget "Open Spritz iOSTests" */;
+			buildPhases = (
+				5875EED319A1513700058F77 /* Sources */,
+				5875EED419A1513700058F77 /* Frameworks */,
+				5875EED519A1513700058F77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5875EEDD19A1513800058F77 /* PBXTargetDependency */,
+			);
+			name = "Open Spritz iOSTests";
+			productName = "Open Spritz iOSTests";
+			productReference = 5875EED719A1513700058F77 /* Open Spritz iOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5875EEAB19A1513700058F77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Vivek Seth";
+				TargetAttributes = {
+					5875EED619A1513700058F77 = {
+						TestTargetID = 5875EEB219A1513700058F77;
+					};
+				};
+			};
+			buildConfigurationList = 5875EEAE19A1513700058F77 /* Build configuration list for PBXProject "Open Spritz iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5875EEAA19A1513700058F77;
+			productRefGroup = 5875EEB419A1513700058F77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5875EEB219A1513700058F77 /* Open Spritz iOS */,
+				5875EED619A1513700058F77 /* Open Spritz iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5875EEB119A1513700058F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5875EECD19A1513700058F77 /* Main_iPad.storyboard in Resources */,
+				5875EED219A1513700058F77 /* Images.xcassets in Resources */,
+				5875EECA19A1513700058F77 /* Main_iPhone.storyboard in Resources */,
+				5875EEC119A1513700058F77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5875EED519A1513700058F77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5875EEE319A1513800058F77 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5875EEAF19A1513700058F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5875EED019A1513700058F77 /* VSViewController.m in Sources */,
+				5875EEF619A1515B00058F77 /* UIView+KHAExtensions.m in Sources */,
+				5875EEF719A1515B00058F77 /* VSSpritzLabel.m in Sources */,
+				5875EEF819A1515B00058F77 /* VSSpritzViewController.m in Sources */,
+				5875EEC319A1513700058F77 /* main.m in Sources */,
+				5875EEC719A1513700058F77 /* VSAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5875EED319A1513700058F77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5875EEE519A1513800058F77 /* Open_Spritz_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5875EEDD19A1513800058F77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5875EEB219A1513700058F77 /* Open Spritz iOS */;
+			targetProxy = 5875EEDC19A1513800058F77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5875EEBF19A1513700058F77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5875EEC019A1513700058F77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5875EEC819A1513700058F77 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5875EEC919A1513700058F77 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5875EECB19A1513700058F77 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5875EECC19A1513700058F77 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5875EEE119A1513800058F77 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5875EEE219A1513800058F77 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5875EEE619A1513800058F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5875EEE719A1513800058F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5875EEE919A1513800058F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Open Spritz iOS/Open Spritz iOS-Prefix.pch";
+				INFOPLIST_FILE = "Open Spritz iOS/Open Spritz iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5875EEEA19A1513800058F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Open Spritz iOS/Open Spritz iOS-Prefix.pch";
+				INFOPLIST_FILE = "Open Spritz iOS/Open Spritz iOS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5875EEEC19A1513800058F77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Open Spritz iOS.app/Open Spritz iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Open Spritz iOS/Open Spritz iOS-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Open Spritz iOSTests/Open Spritz iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5875EEED19A1513800058F77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Open Spritz iOS.app/Open Spritz iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Open Spritz iOS/Open Spritz iOS-Prefix.pch";
+				INFOPLIST_FILE = "Open Spritz iOSTests/Open Spritz iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5875EEAE19A1513700058F77 /* Build configuration list for PBXProject "Open Spritz iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5875EEE619A1513800058F77 /* Debug */,
+				5875EEE719A1513800058F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5875EEE819A1513800058F77 /* Build configuration list for PBXNativeTarget "Open Spritz iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5875EEE919A1513800058F77 /* Debug */,
+				5875EEEA19A1513800058F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5875EEEB19A1513800058F77 /* Build configuration list for PBXNativeTarget "Open Spritz iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5875EEEC19A1513800058F77 /* Debug */,
+				5875EEED19A1513800058F77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5875EEAB19A1513700058F77 /* Project object */;
+}
