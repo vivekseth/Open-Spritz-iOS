@@ -21,7 +21,7 @@
 #pragma mark - Init
 
 - (instancetype)init {
-	self = [super init];
+	self = [super initWithFrame:CGRectZero];
 	if (!self) {
         return nil;
     }

@@ -13,4 +13,12 @@
 
 @property (nonatomic, strong) IBOutlet VSSpritzLabel *spritzLabel;
 
+@property (nonatomic, strong) IBOutlet UIProgressView *progressView;
+
+@property (nonatomic, strong) IBOutlet UILabel *wpmLabel;
+
+@property (nonatomic, strong) IBOutlet UIButton *startStopButton;
+
+@property (nonatomic, strong) IBOutlet UISlider *wpmSlider;
+
 @end

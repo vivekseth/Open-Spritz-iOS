@@ -40,7 +40,7 @@ static const char * VSShowNewWordQueue = "VSShowNewWordQueue";
 - (void)start {
 	NSAssert(self.spritzView != nil, @"Must set `spritzView` property before calling start");
 
-	if (self.currentWordIndex >= self.words.count) {
+	if (self.currentWordIndex >= self.words.count - 1) {
 		self.currentWordIndex = 0;
 		self.isStarted = NO;
 	}
@@ -51,6 +51,9 @@ static const char * VSShowNewWordQueue = "VSShowNewWordQueue";
 		[self.spritzView setWord:word pivotCharacterIndex:[[self class] pivotCharacterIndexForWord:word]];
 
 		[self.spritzView beginStartAnimationWithCompletion:^(BOOL finished){
+			if (self.delegate && [self.delegate respondsToSelector:@selector(spritzViewControllerDidStartShowingWords:)]) {
+				[self.delegate spritzViewControllerDidStartShowingWords:self];
+			}
 			[self startShowingWords];
 		}];
 	}
@@ -85,16 +88,26 @@ static const char * VSShowNewWordQueue = "VSShowNewWordQueue";
 			NSString *word = self.words[self.currentWordIndex];
 			dispatch_async(dispatch_get_main_queue(), ^{
 				[self.spritzView setWord:word pivotCharacterIndex:[[self class] pivotCharacterIndexForWord:word]];
+				if (self.delegate && [self.delegate respondsToSelector:@selector(spritzViewController:didShowWordIndex:)]) {
+					[self.delegate spritzViewController:self didShowWordIndex:self.currentWordIndex];
+				}
 			});
-
-			float timeMod = [[self class] relativeTimeForWord:self.words[self.currentWordIndex]];
-			NSTimeInterval interval = 60.0 / (float)self.wordsPerMinute * timeMod;
-			usleep(1000000 * interval);
+			if (self.currentWordIndex < self.words.count - 1) {
+				float timeMod = [[self class] relativeTimeForWord:self.words[self.currentWordIndex]];
+				NSTimeInterval interval = 60.0 / (float)self.wordsPerMinute * timeMod;
+				usleep(1000000 * interval);
+			}
 		}
+		dispatch_sync(dispatch_get_main_queue(), ^{
+			self.isStarted = NO;
+			if (self.delegate && [self.delegate respondsToSelector:@selector(spritzViewControllerDidFinishShowingWords:)]) {
+				[self.delegate spritzViewControllerDidFinishShowingWords:self];
+			}
+		});
 	});
 }
 
-- (NSInteger)totalWordCount {
+- (NSUInteger)totalWordCount {
 	return self.words.count;
 }
 

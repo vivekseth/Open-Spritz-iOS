@@ -11,14 +11,30 @@
 
 @class VSSpritzViewController;
 
+@protocol VSSpritzViewControllerDelegate <NSObject>
+
+@optional
+
+- (void)spritzViewController:(VSSpritzViewController * )spritzViewController didShowWordIndex:(NSUInteger)wordIndex;
+
+- (void)spritzViewControllerDidStartShowingWords:(VSSpritzViewController * )spritzViewController;
+
+- (void)spritzViewControllerDidFinishShowingWords:(VSSpritzViewController * )spritzViewController;
+
+@end
+
+@class VSSpritzViewController;
+
 @interface VSSpritzViewController : NSObject
 
 @property (nonatomic) BOOL isStarted;
-@property (nonatomic) NSInteger wordsPerMinute;
-@property (nonatomic) NSInteger currentWordIndex;
+@property (nonatomic) NSUInteger wordsPerMinute;
+@property (nonatomic) NSUInteger currentWordIndex;
 
 @property (nonatomic, strong) UIView<VSSpritzView> *spritzView;
-@property (nonatomic, readonly) NSInteger totalWordCount;
+@property (nonatomic, weak) id<VSSpritzViewControllerDelegate> delegate;
+
+@property (nonatomic, readonly) NSUInteger totalWordCount;
 
 - (instancetype)initWithBodyText:(NSString *)bodyText;
 

@@ -18,7 +18,7 @@ static NSString * const VSExampleBodyText =
 "crazy ones, we see genius. Because the people who are crazy enough to think they can "
 "change the world, are the ones who do.";
 
-@interface VSViewController ()
+@interface VSViewController ()<VSSpritzViewControllerDelegate>
 
 @property (nonatomic, strong) VSSpritzViewController *spritzViewController;
 
@@ -30,10 +30,34 @@ static NSString * const VSExampleBodyText =
     [super viewDidLoad];
 
 	self.spritzViewController = [[VSSpritzViewController alloc] initWithBodyText:VSExampleBodyText];
+	self.spritzViewController.delegate = self;
 	self.spritzViewController.spritzView = self.spritzLabel;
 	self.spritzViewController.wordsPerMinute = 400;
-	
-	[self.spritzViewController start];
+}
+
+- (void)spritzViewController:(VSSpritzViewController *)spritzViewController didShowWordIndex:(NSUInteger)wordIndex {
+	[self.progressView setProgress: ((CGFloat)wordIndex / self.spritzViewController.totalWordCount) animated:YES];
+}
+
+- (void)spritzViewControllerDidStartShowingWords:(VSSpritzViewController *)spritzViewController {
+	[self.startStopButton setTitle:@"Stop" forState:UIControlStateNormal];
+}
+
+- (void)spritzViewControllerDidFinishShowingWords:(VSSpritzViewController *)spritzViewController {
+	[self.startStopButton setTitle:@"Start" forState:UIControlStateNormal];
+}
+
+- (IBAction)didTapStartStopButton:(id)sender {
+	if (self.spritzViewController.isStarted) {
+		[self.spritzViewController stop];
+	} else {
+		[self.spritzViewController start];
+	}
+}
+
+- (IBAction)didChangeWPMSliderValue:(id)sender {
+	self.spritzViewController.wordsPerMinute = self.wpmSlider.value;
+	self.wpmLabel.text = [NSString stringWithFormat:@"%d WPM", (int)self.wpmSlider.value];
 }
 
 @end

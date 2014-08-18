@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,15 +17,79 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-6h-WrK" customClass="VSSpritzLabel">
-                                <rect key="frame" x="20" y="108" width="280" height="114"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3QO-6h-WrK" customClass="VSSpritzLabel">
+                                <rect key="frame" x="20" y="241" width="280" height="86"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="3QO-6h-WrK" secondAttribute="height" multiplier="35:11" constant="6.363636363636374" id="egv-cV-ZUX"/>
+                                </constraints>
                             </view>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="e3z-li-8w3">
+                                <rect key="frame" x="20" y="192" width="280" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="dHg-KW-IQR"/>
+                                </constraints>
+                            </progressView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="300" minValue="100" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="P45-vi-0u0">
+                                <rect key="frame" x="18" y="372" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AR9-oy-Muc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="didChangeWPMSliderValue:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gfD-0u-wAg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="400 WPM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KS-Jd-uX2">
+                                <rect key="frame" x="20" y="339" width="76" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AJ2-fr-CwN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYN-qi-tM8">
+                                <rect key="frame" x="267" y="339" width="33" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapStartStopButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="cPA-5q-oh0"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="e3z-li-8w3" secondAttribute="centerX" id="4pS-6Y-lch"/>
+                            <constraint firstAttribute="centerX" secondItem="P45-vi-0u0" secondAttribute="centerX" id="6Vq-cL-Hlt"/>
+                            <constraint firstItem="3QO-6h-WrK" firstAttribute="width" secondItem="e3z-li-8w3" secondAttribute="width" id="7eF-Q8-TDi"/>
+                            <constraint firstAttribute="trailing" secondItem="3QO-6h-WrK" secondAttribute="trailing" constant="20" id="BW3-PS-xdL"/>
+                            <constraint firstItem="3QO-6h-WrK" firstAttribute="leading" secondItem="1KS-Jd-uX2" secondAttribute="leading" id="GJo-5A-2w6"/>
+                            <constraint firstItem="P45-vi-0u0" firstAttribute="top" secondItem="3QO-6h-WrK" secondAttribute="bottom" constant="45" id="HJ1-Ak-UQr"/>
+                            <constraint firstItem="1KS-Jd-uX2" firstAttribute="top" secondItem="3QO-6h-WrK" secondAttribute="bottom" constant="12" id="HWT-KJ-I64"/>
+                            <constraint firstItem="mYN-qi-tM8" firstAttribute="height" secondItem="1KS-Jd-uX2" secondAttribute="height" id="NGJ-7o-ZX2"/>
+                            <constraint firstItem="3QO-6h-WrK" firstAttribute="top" secondItem="e3z-li-8w3" secondAttribute="bottom" constant="47" id="VbW-44-oMK"/>
+                            <constraint firstItem="mYN-qi-tM8" firstAttribute="trailing" secondItem="3QO-6h-WrK" secondAttribute="trailing" id="Vn4-u5-Jps"/>
+                            <constraint firstItem="mYN-qi-tM8" firstAttribute="centerY" secondItem="1KS-Jd-uX2" secondAttribute="centerY" id="aWS-os-YoJ"/>
+                            <constraint firstAttribute="centerX" secondItem="3QO-6h-WrK" secondAttribute="centerX" id="bAZ-Fd-apa"/>
+                            <constraint firstItem="3QO-6h-WrK" firstAttribute="width" secondItem="P45-vi-0u0" secondAttribute="width" id="mqK-ua-sAN"/>
+                            <constraint firstItem="mYN-qi-tM8" firstAttribute="trailing" secondItem="3QO-6h-WrK" secondAttribute="trailing" id="ppW-8b-r5c"/>
+                            <constraint firstAttribute="centerY" secondItem="3QO-6h-WrK" secondAttribute="centerY" id="qoi-PF-OgL"/>
+                            <constraint firstItem="P45-vi-0u0" firstAttribute="top" secondItem="1KS-Jd-uX2" secondAttribute="bottom" constant="12" id="rfF-Jn-ggu"/>
+                            <constraint firstItem="3QO-6h-WrK" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="s1J-nQ-DTh"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="progressView" destination="e3z-li-8w3" id="AiA-7I-UkG"/>
                         <outlet property="spritzLabel" destination="3QO-6h-WrK" id="bUy-Hc-LBo"/>
+                        <outlet property="startStopButton" destination="mYN-qi-tM8" id="AMX-Pk-rlr"/>
+                        <outlet property="wpmLabel" destination="1KS-Jd-uX2" id="tTY-EB-rzY"/>
+                        <outlet property="wpmSlider" destination="P45-vi-0u0" id="sP9-qW-6Lq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
