@@ -114,16 +114,30 @@
  Updates font to fit in area
  Updates crosshair location based on width
  */
+// TODO(vivek): Only update constraints and font if dimensions of self have been invalidated
 - (void)layoutSubviews {
 	const CGFloat heightToFontSizeRatio = 0.3333;
 	const CGFloat widthToPivotOffsetRatio = 0.3333;
+
+	CGFloat oldOffsetFromLeft = self.pivotOffset - self.horizontalWordPositionConstraint.constant;
+	CGFloat oldWordWidth = [self.wordLabel.text sizeWithAttributes:@{NSFontAttributeName: self.wordLabel.font}].width;
 
 	self.pivotOffset = widthToPivotOffsetRatio * self.frame.size.width;
 	self.horizontalCrosshairPositionConstraint.constant = -self.pivotOffset;
 	self.wordLabel.font = [self.wordLabel.font fontWithSize:(heightToFontSizeRatio * self.frame.size.height)];
 
+	// Calculate new offset for word based on old offset
+	if (oldWordWidth != 0) {
+		CGFloat offsetFromLeftWidthPercentage = oldOffsetFromLeft / oldWordWidth;
+		CGFloat newOffsetFromLeft = offsetFromLeftWidthPercentage * [self.wordLabel.text sizeWithAttributes:@{NSFontAttributeName: self.wordLabel.font}].width;
+		self.horizontalWordPositionConstraint.constant = -newOffsetFromLeft+self.pivotOffset;
+	}
+
 	[super layoutSubviews];
 }
+
+
+
 
 #pragma mark - Utility
 
