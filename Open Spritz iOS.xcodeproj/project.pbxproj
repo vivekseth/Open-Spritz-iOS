@@ -422,6 +422,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Open Spritz iOS/Open Spritz iOS-Prefix.pch";
 				INFOPLIST_FILE = "Open Spritz iOS/Open Spritz iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -435,6 +436,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Open Spritz iOS/Open Spritz iOS-Prefix.pch";
 				INFOPLIST_FILE = "Open Spritz iOS/Open Spritz iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -499,6 +501,7 @@
 				5875EEEA19A1513800058F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5875EEEB19A1513800058F77 /* Build configuration list for PBXNativeTarget "Open Spritz iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +510,7 @@
 				5875EEED19A1513800058F77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
