@@ -47,8 +47,7 @@ static const char * VSShowNewWordQueue = "VSShowNewWordQueue";
 
 	if (self.isStarted == NO) {
 		self.isStarted = YES;
-		NSString *word = self.words[self.currentWordIndex];
-		[self.spritzView setWord:word pivotCharacterIndex:[[self class] pivotCharacterIndexForWord:word]];
+		[self displayWordWithIndex:self.currentWordIndex];
 
 		[self.spritzView beginStartAnimationWithCompletion:^(BOOL finished){
 			if (self.delegate && [self.delegate respondsToSelector:@selector(spritzViewControllerDidStartShowingWords:)]) {
@@ -69,8 +68,17 @@ static const char * VSShowNewWordQueue = "VSShowNewWordQueue";
 }
 
 - (void)displayWordWithIndex:(NSInteger)wordIndex {
+	if (wordIndex >= self.totalWordCount) {
+		NSLog(@"oh shit");
+	}
+	NSAssert(0 <= wordIndex && wordIndex < self.totalWordCount, @"wordIndex must be between 0 and totalWordCount-1");
+
 	NSString *word = self.words[wordIndex];
-	[self.spritzView setWord:word pivotCharacterIndex:[[self class] pivotCharacterIndexForWord:word]];
+	if (!word || [word isEqualToString:@""]) {
+		return;
+	} else {
+		[self.spritzView setWord:word pivotCharacterIndex:[[self class] pivotCharacterIndexForWord:word]];
+	}
 }
 
 #pragma mark - Private
@@ -85,9 +93,8 @@ static const char * VSShowNewWordQueue = "VSShowNewWordQueue";
 				break;
 			}
 
-			NSString *word = self.words[self.currentWordIndex];
-			dispatch_async(dispatch_get_main_queue(), ^{
-				[self.spritzView setWord:word pivotCharacterIndex:[[self class] pivotCharacterIndexForWord:word]];
+			dispatch_sync(dispatch_get_main_queue(), ^{
+				[self displayWordWithIndex:self.currentWordIndex];
 				if (self.delegate && [self.delegate respondsToSelector:@selector(spritzViewController:didShowWordIndex:)]) {
 					[self.delegate spritzViewController:self didShowWordIndex:self.currentWordIndex];
 				}

@@ -136,9 +136,6 @@
 	[super layoutSubviews];
 }
 
-
-
-
 #pragma mark - Utility
 
 - (CGFloat)calculateOffsetForWord:(NSString *)word pivotCharacterIndex:(NSInteger)pivotCharacterIndex {
@@ -157,10 +154,7 @@
 #pragma mark - Public Methods
 
 - (void)setWord:(NSString *)word pivotCharacterIndex:(NSInteger)pivotCharacterIndex {
-	if (!word || [word isEqualToString:@""]) {
-		return;
-		// NSParameterAssert(!word || [word isEqualToString:@""]);
-	}
+	NSAssert(word && ![word isEqualToString:@""], @"word must not be nil, nor empty string");
 
 	// Update font size and crosshair location if needed.
 	[self layoutIfNeeded];
@@ -188,14 +182,14 @@
 
 - (void)beginStartAnimationWithCompletion:(void(^)(BOOL finished))completion {
 	UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.pivotOffset, self.frame.size.height)];
-	leftView.backgroundColor = [UIColor orangeColor];
+	leftView.backgroundColor = [UIColor blueColor];
 	leftView.translatesAutoresizingMaskIntoConstraints = NO;
 	[self addSubview:leftView];
 	CGRect toFrameLeftView = CGRectMake(self.pivotOffset, 0, 0, self.frame.size.height);
 
 
 	UIView *rightView = [[UIView alloc] initWithFrame:CGRectMake(self.pivotOffset, 0, (self.frame.size.width - self.pivotOffset), self.frame.size.height)];
-	rightView.backgroundColor = [UIColor orangeColor];
+	rightView.backgroundColor = [UIColor blueColor];
 	rightView.translatesAutoresizingMaskIntoConstraints = NO;
 	[self addSubview:rightView];
 	CGRect toFrameRightView = CGRectMake(self.pivotOffset, 0, 0, self.frame.size.height);
